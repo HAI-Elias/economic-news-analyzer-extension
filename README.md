@@ -21,37 +21,30 @@ This project is an economic news analyzer Chrome extension that uses OpenAI's GP
 
 To run this project locally, follow these steps:
 
-### 1. Clone the repository:
-```bash
-git clone https://github.com/HAI-Elias/economic-news-analyzer-extension.git
-cd economic-news-analyzer-extension
-```
+### 1. Download the Extension
 
-### 2. Set up the backend server:
-- Install dependencies:
-```bash
-npm install
-```
+- Download the `investing-news-analyzer` folder from the GitHub repository.
 
-- Create a `.env` file based on the `.env.example` and replace `your-openai-api-key-here` with your OpenAI API key.
+### 2. Load the Extension in Chrome
 
-### 3. Start the backend server:
-```bash
-npm start
-```
+- Open **Google Chrome**.
+- Go to the URL: `chrome://extensions/`
+- Enable **Developer Mode** by toggling the switch in the top right corner.
+- Click on the **Load unpacked** button.
+- Select the `investing-news-analyzer` folder that you downloaded earlier.
 
-The server will run on `http://localhost:3000`.
+Your extension should now be installed and ready to use.
 
-### 4. Install the Chrome extension:
-1. Go to Chrome Extensions page (`chrome://extensions/`).
-2. Enable **Developer mode**.
-3. Click **Load unpacked** and select the folder containing the extension code.
+### 3. Test the Extension
 
-### 5. Test the extension:
-- Go to an Investing.com article (just in the Forex News section for the moment: `https://www.investing.com/news/forex-news/...`).
-- Wait 5 seconds
-- Open the extension.
-- View the results in the popup.
+- Go to an article on **Investing.com** (currently only supported in the **Forex News** section).
+- Click on the extension icon in your Chrome toolbar.
+- A popup will appear with the results of the news analysis, including a summary and information on the potential market impact.
+
+### 4. (Optional) Modify API Key
+
+- If you want to use your own OpenAI API key, you can update the `.env.example` file in the project with your key.
+- Rename `.env.example` to `.env` and replace `YOUR_OPENAI_API_KEY` with your actual OpenAI API key.
 
 ## Deployment
 
@@ -59,6 +52,23 @@ The backend proxy server is deployed on Vercel for easy access to the OpenAI API
 
 ### Vercel URL:
 - Proxy server: `https://proxy-server-three-chi.vercel.app/` with the end point `/api/openai`.
+
+## Project Structure
+
+- `investing-news-analyzer/`: The Chrome extension source code.
+- `index.js`: The proxy server code to handle requests to the OpenAI API.
+- `.env.example`: Example environment file with placeholder for the OpenAI API key.
+- `.gitignore`: A file to ignore unnecessary files from being tracked by Git.
+- `README.md`: Documentation on how to set up and use the project.
+
+## Troubleshooting
+
+- If the extension doesn't work properly, make sure you are on a page within the **Forex News** section of Investing.com.
+- Ensure your OpenAI API key is correctly configured in the `.env` file (if using your own key).
+
+## License
+
+This project is licensed under the MIT License
 
 ## Contributing
 
