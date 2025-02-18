@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Investing News Analyzer",
+  "version": "1.0",
+  "description": "Analyze Investing.com's news via OpenAI's API.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.investing.com/news/forex-news/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
