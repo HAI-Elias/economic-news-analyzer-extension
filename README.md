@@ -48,7 +48,9 @@ The server will run on `http://localhost:3000`.
 3. Click **Load unpacked** and select the folder containing the extension code.
 
 ### 5. Test the extension:
-- Open the extension, input a news article, and click **Analyze**.
+- Go to an Investing.com article (just in the Forex News section for the moment: `https://www.investing.com/news/forex-news/...`).
+- Wait 5 seconds
+- Open the extension.
 - View the results in the popup.
 
 ## Deployment
@@ -56,7 +58,7 @@ The server will run on `http://localhost:3000`.
 The backend proxy server is deployed on Vercel for easy access to the OpenAI API.
 
 ### Vercel URL:
-- Proxy server: `https://proxy-server-three-chi.vercel.app/`
+- Proxy server: `https://proxy-server-three-chi.vercel.app/` with the end point `/api/openai`.
 
 ## Contributing
 
