@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# .env file containing sensitive API keys
+.env
+
+# Log files
+*.log
+
+# Vercel project configuration
+.vercel/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE configurations (for example, VSCode)
+.vscode/
+.idea/
